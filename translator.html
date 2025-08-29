@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Translation Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>🌍 Language Translation Tool</h2>
+      <p class="hint">Type text, pick languages, and translate. Uses LibreTranslate (with your API key) and auto-fallback to MyMemory.</p>
+
+      <label for="sourceText">Enter text</label>
+      <textarea id="sourceText" placeholder="Type text here..."></textarea>
+
+      <div class="row">
+        <div>
+          <label for="sourceLang">Source language</label>
+          <select id="sourceLang">
+            <option value="auto" selected>Auto detect</option>
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+          </select>
+        </div>
+        <div>
+          <label for="targetLang">Target language</label>
+          <select id="targetLang">
+            <option value="hi">Hindi</option>
+            <option value="en" selected>English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="translateBtn">Translate</button>
+        <button class="secondary" id="copyBtn">📋 Copy</button>
+        <button class="secondary" id="speakBtn">🔊 Speak</button>
+      </div>
+
+      <h3 style="margin-top:18px;">Translated text</h3>
+      <div class="result" id="result"></div>
+      <small id="status"></small>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
